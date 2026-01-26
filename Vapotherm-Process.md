@@ -1,8 +1,28 @@
 # Vapotherm Embedded Software Development Process
 
+## Table of Contents
+- [Overview](#overview)
+- [Regulatory Compliance Framework](#regulatory-compliance-framework)
+- [Key Principles from "Patterns in the Machine"](#key-principles-from-patterns-in-the-machine)
+- [Development Process Phases](#development-process-phases)
+  - [1. Software Development Planning](#1-software-development-planning)
+  - [2. Software Requirements Specification](#2-software-requirements-specification)
+  - [3. Software Architectural Design](#3-software-architectural-design)
+  - [4. Software Detailed Design](#4-software-detailed-design)
+  - [5. Software Implementation](#5-software-implementation)
+  - [6. Software Verification](#6-software-verification)
+  - [7. Software Validation](#7-software-validation)
+  - [8. Software Maintenance and Configuration Management](#8-software-maintenance-and-configuration-management)
+- [Risk Management Integration](#risk-management-integration)
+- [Documentation Requirements](#documentation-requirements)
+- [Continuous Improvement](#continuous-improvement)
+- [Bibliography](#bibliography)
+
 ## Overview
 
-This document outlines an embedded software development process for medical devices that complies with IEC 62304 (Medical device software — Software life cycle processes) and FDA software functions regulations. The process incorporates design patterns and best practices from John Taylor's "Patterns in the Machine: A Software Engineering Guide to Embedded Development," which emphasizes safety, reliability, and maintainability in embedded systems.
+This document outlines the initial ideas for Vapotherm's embedded software development process for medical devices that complies with IEC 62304 (Medical device software — Software life cycle processes) and FDA software functions regulations. The process incorporates design patterns and best practices from John Taylor's "Patterns in the Machine: A Software Engineering Guide to Embedded Development," which emphasizes safety, reliability, and maintainability in embedded systems.
+
+These are only initial ideas made without much understanding current practices at Vapotherm.  These ideas will be refined through discussions with leadership (Soundharya, Alvin), peers (Sila, Oskar) and team (Leo, Tianwei, Niall, David and Brian)
 
 ## Regulatory Compliance Framework
 
@@ -103,6 +123,27 @@ Doxygen is a documentation generator tool that extracts documentation from sourc
 - **Best Practices**: Use consistent comment styles, keep documentation concise yet comprehensive, and update comments during code changes. Integrate Doxygen generation into the build process or CI/CD pipeline to ensure documentation is always current.
 - **Integration with CI/CD**: Automate Doxygen documentation generation in Bitbucket Pipelines to produce and publish documentation artifacts with each build, facilitating easy access for the development team and regulatory reviews.
 
+#### Test Driven Development (TDD) Principles
+Test Driven Development is a software development approach where tests are written before the code they are intended to validate. The templates for the tests are the software requirements and design documentaion.  This methodology promotes high-quality, reliable code by ensuring that functionality is thoroughly tested from the outset, aligning with safety-critical embedded software requirements.
+
+- **Red-Green-Refactor Cycle**: Follow the core TDD cycle: (1) Write a failing test (Red), (2) Implement the minimal code to make the test pass (Green), (3) Refactor the code for improvement while keeping tests passing. This iterative process ensures incremental development and prevents regressions.
+- **Test-First Approach**: Define the expected behavior through tests before writing production code. This clarifies requirements and drives design decisions, leading to more modular and testable code.
+- **Incremental Development**: Develop features in small, testable increments. Each test represents a specific requirement or behavior, promoting focused development and early detection of issues.
+- **Test Quality and Coverage**: Write clear, concise tests that cover normal, edge, and error cases. Aim for high test coverage (75% for ordinary code, 85% for safety-critical) using tools like Google Test. Ensure tests are independent, fast, and repeatable.
+- **Integration with Embedded Constraints**: Adapt TDD for embedded systems by using mocks and stubs for hardware dependencies. Run tests on host machines or simulators when possible, and integrate TDD practices into the CI/CD pipeline for continuous validation.
+- **Benefits for Safety-Critical Software**: TDD enhances code reliability, supports traceability to requirements, and facilitates compliance with standards like IEC 62304 by providing a robust testing foundation from the start.
+
+#### Git-Flow Branching Structure
+Git-Flow is a branching model that defines a strict branching structure to support parallel development, release management, and hotfixes in a collaborative environment. It is particularly useful for embedded software projects requiring stable releases and rigorous version control.
+
+- **Main Branch**: The production-ready branch containing only stable, release-quality code. All releases are tagged from this branch.
+- **Develop Branch**: The integration branch for ongoing development. Features are merged here once completed and tested.
+- **Feature Branches**: Created from develop for implementing new features. Named as `feature/feature-name`, merged back to develop via pull requests after completion.
+- **Release Branches**: Created from develop when preparing for a release. Named as `release/version`, used for final testing and bug fixes before merging to main and develop.
+- **Hotfix Branches**: Created from main for urgent fixes to production issues. Named as `hotfix/hotfix-name`, merged back to both main and develop.
+
+This structure ensures clean separation of concerns, supports CI/CD integration, and maintains traceability for regulatory compliance. For detailed guidance, refer to [Atlassian Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
+
 ### 6. Software Verification
 - Unit testing of individual modules
 - Integration testing of components
@@ -137,6 +178,18 @@ Integration testing is a relatively quick set of tests designed to verify that i
 - **Execution and Timing**: Perform integration tests frequently during development, ideally as part of the CI/CD pipeline, to catch issues early. Aim for quick execution (e.g., minutes rather than hours) to support agile development while ensuring reliability.
 - **Tools and Environment**: Leverage tools like Google Test for C/C++ integration tests, or scripting frameworks for higher-level integrations. Run tests on development boards or emulators when possible to approximate real hardware behavior.
 - **Compliance and Documentation**: Document test cases, results, and any deviations. Ensure traceability to requirements and include integration testing in the verification plan per IEC 62304 guidelines.
+
+#### Static Analysis
+Static analysis tools are essential for detecting potential bugs, security vulnerabilities, and code quality issues early in the development process. They analyze source code without executing it, complementing dynamic testing and code reviews.
+
+- **Local Developer Machine Tools**: Developers should run lightweight, open-source static analysis tools locally to catch issues before committing code.
+  - **Cppcheck**: A free, open-source tool for C/C++ code that detects bugs, undefined behavior, and performance issues. It supports MISRA C/C++ rules and can be integrated into IDEs. Reference: [Cppcheck](https://cppcheck.sourceforge.io/)
+  - **Flawfinder**: A tool that scans C/C++ source code for potential security vulnerabilities, such as buffer overflows and format string issues. It's simple to use and provides severity ratings. Reference: [Flawfinder](https://dwheeler.com/flawfinder/)
+- **CI/CD Integration**: For deeper analysis, integrate a commercial static analysis tool into the CI/CD pipeline (e.g., Bitbucket Pipelines) to automatically scan code on commits and pull requests.
+  - **Coverity**: A comprehensive static analysis tool that identifies defects, security vulnerabilities, and compliance issues in C/C++ code. It provides detailed reports and integrates with CI/CD systems. Reference: [Synopsys Coverity](https://www.synopsys.com/software-integrity/security-testing/static-analysis-tools.html)
+  - Alternatives include PVS-Studio ([PVS-Studio](https://pvs-studio.com/)), Klocwork ([Perforce Klocwork](https://www.perforce.com/products/klocwork)), or CodeSonar ([GrammaTech CodeSonar](https://www.grammatech.com/products/codesonar)). Choose based on project needs and licensing.
+
+Run static analysis regularly, address findings promptly, and document results for regulatory compliance.
 
 ### 7. Software Validation
 - System-level testing in target environment
@@ -189,3 +242,14 @@ Cybersecurity risks are integrated with overall product risk management, ensurin
 - Regular audits and reviews
 
 This process ensures compliance with regulatory requirements while leveraging proven patterns for building safe, reliable embedded software for medical devices.
+
+## Bibliography
+
+- Taylor, John. *Patterns in the Machine: A Software Engineering Guide to Embedded Development*. Amazon: [https://www.amazon.com/Patterns-Machine-Software-Engineering-Embedded/dp/1543901803](https://www.amazon.com/Patterns-Machine-Software-Engineering-Embedded/dp/1543901803)
+- Taylor, John. *The Embedded Project Cookbook: Practical Techniques for Embedded Systems Development*. Amazon: [https://www.amazon.com/Embedded-Project-Cookbook-Practical-Techniques/dp/012817932X](https://www.amazon.com/Embedded-Project-Cookbook-Practical-Techniques/dp/012817932X)
+- Grenning, James W. *Test Driven Development for Embedded C*. Amazon: [https://www.amazon.com/Test-Driven-Development-Embedded-Pragmatic-Programmers/dp/193435662X](https://www.amazon.com/Test-Driven-Development-Embedded-Pragmatic-Programmers/dp/193435662X)
+- FDA. *Premarket Cybersecurity Guidance*. [https://www.fda.gov/medical-devices/digital-health-center-excellence/premarket-cybersecurity-guidance](https://www.fda.gov/medical-devices/digital-health-center-excellence/premarket-cybersecurity-guidance)
+- FDA. *Guidance for the Content of Premarket Submissions for Software Contained in Medical Devices*. [https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-content-premarket-submissions-software-contained-medical-devices](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-content-premarket-submissions-software-contained-medical-devices)
+
+### Other References
+- Sonmez, John. *Soft Skills: The Software Developer's Life Manual*. Amazon: [https://www.amazon.com/Soft-Skills-software-developers-manual/dp/1617292397](https://www.amazon.com/Soft-Skills-software-developers-manual/dp/1617292397)
