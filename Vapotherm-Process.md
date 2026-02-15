@@ -29,6 +29,9 @@ This document outlines the initial ideas for Vapotherm's embedded software devel
 
 The point of these ideas is not that there is anything wrong with the current Vaportherm way of working.  A key idea of agile process is that teams are self governed and are constantly evaluating what works and what can be improved.
 
+Simple starting point:
+- Possible simple start plan, convert to git, implement git-flow branching, implement peer code review cross time zones.
+
 ## Why Are We Doing This and Why Do We Want to Improve Process?
 
    1. We want to make great medical devices for our patients and customers.  
