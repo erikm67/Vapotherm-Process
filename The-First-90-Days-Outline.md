@@ -101,6 +101,8 @@ Cultural adaptation checklist
 
 ## 2. Accelerate Your Learning
 
+> You know nothing, Jon Snow. - Ygritte
+
 Questions:
 
 - How did we get to this point?  
