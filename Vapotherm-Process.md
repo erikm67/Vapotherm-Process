@@ -366,6 +366,8 @@ Run static analysis regularly, address findings promptly, and document results f
 
 #### Pull Request Peer Code Review Checklist
 
+Initial idea is that the acute team reviews home and vice versa.  Code does not merge until two team members are happy.
+
 Peer code reviews are critical for maintaining code quality, safety, and compliance in embedded software development. Use the following checklist during pull request reviews to ensure thorough evaluation:
 
 - **Build Verification**: Confirm that the code builds successfully without errors in the CI/CD pipeline (e.g., Bitbucket Pipelines). Check for any build failures and ensure all dependencies are properly configured.
