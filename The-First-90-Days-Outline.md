@@ -107,6 +107,7 @@ Questions:
 - Why was my role created?
 - What do I most need to learn?
 - What is going on and why?
+- What are the points from my hiring skills assessment?
 - Questions about the past?
   - Performance
     - How has this organization performed in the past?
