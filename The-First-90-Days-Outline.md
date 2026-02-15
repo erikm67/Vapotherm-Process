@@ -173,6 +173,21 @@ Questions:
 | Plant and market tours | Learning firsthand from people close to the product. Plant tours let you meet production personnel informally and listen to their concerns. Meetings with sales and production staff help you assess technical capabilities. Market tours can introduce you to customers, whose comments can reveal problems and opportunities. | Most useful for managers of business units. | Yes, need to go to Cincy, Singapore and NH. |
 | Pilot projects | Gaining deep insight into technical capabilities, culture, and politics. Although these insights are not the primary purpose of pilot projects, you can learn a lot from how the organization or group responds to your pilot initiatives. | Useful for managers at all levels. The size of the pilot projects and their impact will increase as you rise through the organization. | Yes, good idea for each process improvement. |
 
+### Structured Questions for Team
+
+- Talk about my background and general vision
+- Talk about their background
+- Same questions about business
+  - What are the biggest challenges facing the org?
+  - Why is the org facing these challenges?
+  - What are the most promising unexplored opportunities for growth?
+  - What would need to happen for org to exploit these opportunities?
+  - If you were me what would you focus on?
+
+### Structured Questions for Parallel
+
+### Structured Questions for Leaders
+
 ## 3. Match Strategy to Situation
 
 ## 4. Secure Early Wins
