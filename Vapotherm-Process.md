@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Overview](#overview)
+- [Why Are We Doing This and Why Do We Want to Improve Process?](#why-are-we-doing-this-and-why-do-we-want-to-improve-process)
 - [Regulatory Compliance Framework](#regulatory-compliance-framework)
 - [Key Principles from "Patterns in the Machine"](#key-principles-from-patterns-in-the-machine)
 - [Measuring Progress](#measuring-progress)
@@ -26,7 +27,9 @@ These are only initial ideas made without much understanding current practices a
 
 This document outlines the initial ideas for Vapotherm's embedded software development process for medical devices that complies with IEC 62304 (Medical device software — Software life cycle processes) and FDA software functions regulations. The process incorporates design patterns and best practices from John Taylor's "Patterns in the Machine: A Software Engineering Guide to Embedded Development," which emphasizes safety, reliability, and maintainability in embedded systems.
 
-### Why Are We Doing This and Why Do We Want to Improve Process?
+The point of these ideas is not that there is anything wrong with the current Vaportherm way of working.  A key idea of agile process is that teams are self governed and are constantly evaluating what works and what can be improved.
+
+## Why Are We Doing This and Why Do We Want to Improve Process?
 
    1. We want to make great medical devices for our patients and customers.  
    1. Our devices help people who are sick and want to live the most normal life possible.  My wife's mother had a lung fibrosis.  She was able to use a high flow device in the acute setting so she could talk to visitors and at home and to be able to get out of the hospital.  It made a big difference.
@@ -36,6 +39,8 @@ This document outlines the initial ideas for Vapotherm's embedded software devel
    1. As corny as it sounds, improving process improves our fun as devlopers in creating the software.  If we understand where the bottlenecks are we can fix them and get stuff done quickly and efficiently.  This maximizes our fun.
 
 ## Regulatory Compliance Framework
+
+A good process is much more than this but at the core, our software process has to meet the regulatory standards and guidance.
 
 ### IEC 62304 Requirements
 
@@ -75,15 +80,27 @@ These patterns are integrated throughout the development process to build robust
 > numbers, you know something about it; but when you cannot measure it, when you cannot
 > express it in numbers, your knowledge is of a meagre and unsatisfactory kind."
 
-As we implement this process we need to measure our output.  Using the words "we" and "our" is intentional.  We are not measuring individual progress because that does not matter.  What matters is what the team accomplishes.  Thinking about team progress fosters cooperation and sharing information.  This progress measure is for us to be able to see the positive effects of our development process improvements.  If we make things easier and more automated then our metrics will improve.
+As we implement this process we need to measure our progress in delivering finished pieces of the software.  Using the words "we" and "our" is intentional.  We are not measuring individual progress because that does not matter.  What matters is what the team accomplishes.  Thinking about team progress fosters cooperation and sharing information.  This progress measure is for us to be able to see the positive effects of our development process improvements.  If we make things easier and more automated then our metrics will improve.
 
-The software development literature promotes the use of story points as a way for teams to measure progress.  As the development team we define what the story points measure.  Software developers (and other humans) are bad at measuring time.  We are better at measuring relative things, i.e. this is twice as hard as that.  If we define say 1 story point to be the effort (accomplishing the full definition of done) to deliver a trivial code change like say fixing a typo in a UI string then we can scale more complicated changes relative to that.  Typically we then do a Fibonacci sequence to avoid getting into splitting hairs like "is this 8 points or 9 points".  Fibonacci refresher: 1-2-3-5-8-13-21.  We will break up tasks if they get too big.  Sometimes it is helpful to think about real things like dogs "Is this a chihuahua effort or a great dane?"
+The scrum software development literature promotes the use of story points as a way for teams to measure progress.  As the development team we define what the story points measure.  Software developers (and other humans) are bad at measuring time.  We are better at measuring relative things, i.e. this is twice as hard as that.  If we define say 1 story point to be the effort (accomplishing the full definition of done) to deliver a trivial code change like say fixing a typo in a UI string then we can scale more complicated changes relative to that.  Typically we then do a Fibonacci sequence to avoid getting into splitting hairs like "is this 8 points or 9 points".  Fibonacci refresher: 1-2-3-5-8-13-21.  We will break up tasks if they get too big.  Sometimes it is helpful to think about real things like dogs "Is this a chihuahua effort or a great dane?"
 
-Also, there is power in each team member estimating the effort individually and then talking out the differences as a team.  If one person says it is a 1 and someone else says it is a 13 we probably have a problem with story definition or hidden surprises in the work.
+The kanban literature prefers to focus more on cycle time, flow and throughput of work items through the system.  One possible problem with these metrics is if we are adding to our definition of done then it will falsely look like our throughput declines.
+
+Also, there is power in each team member estimating the effort of a work item individually and then talking out the differences as a team.  If one person says it is a 1 and someone else says it is a 13 we probably have a problem with story definition or hidden surprises in the work.
+
+A possible approach is to measure the combined story points or throughput of the whole embedded team, acute and home.  There will be two separate backlogs since there are two code bases.  For consistency, the Singapore team will primarily focus on home and vice versa but this will likely blend as we move forward.  It would be ideal to do backlog refinement and point estimation together (acute and home) but we will have to see if the logistics work.  Since we are a small group, the thought is that we will follow a kanban style workflow rather than full scrum but we can see what works best.
+
+### Kanban Agile Workflow
+
+- **Principles:** Visualize work, limit work-in-progress (WIP), manage flow, make policies explicit, and continuously improve.
+- **Practices:** Use a shared Kanban board (Backlog → Ready → In Progress → Review → Done), set WIP limits per column, pull work when capacity allows, and track cycle time to identify bottlenecks.  From personal experience, this is a key.  We cannot get to a point where we have many WIP stories that are hanging.
+- **Cadence:** Keep lightweight routines — short daily syncs and regular retrospectives to refine policies and process.
+- **Benefits:** Improves flow, reduces context switching, increases predictability, and supports continuous delivery with minimal overhead.
+- **Meetings:** Daily standup (one or two?), backlog refinement (weekly?), retrospective to improve process
 
 ### Definition of Done
 
-As we progress in defining our process the definition of done will change.  We will need to increase the story points associated with a task accordingly.  If at first we are just doing: create branch, make code changes, debug manually, push branch to code review, code review and merge branch that will be fewer story points than if we add in automated unit testing later.
+As we progress in refining our process the definition of done will change.  We will need to increase the story points associated with a task accordingly.  If at first we are just doing: create branch, make code changes, debug manually, push branch to code review, code review and merge branch that will be fewer story points than if we add in automated unit testing later.
 
 ## Development Process Phases
 
@@ -144,10 +161,14 @@ Per IEC 62304 clause 5.3.2, the software architectural design shall be traceable
   - Resource Pool for memory management
 - Design for testability and maintainability
 - Document the design of each work item in the design document prior to code implementation
+- Do not focus on capturing the details of variables, function names or function parameters in the design document.  These details will be captured using Doxygen tags in the code.
+- Do focus on what the software is doing and how it is doing it before jumping into writing the code.
+  - *"Software engineering is about thinking, not typing."*
+  - *"Weeks of coding can save you hours of planning."*
 
 ### 5. Software Implementation
 
-- Code according to coding standards (MISRA C/C++ for safety)
+- Code according to coding standards (MISRA C/C++ for safety or whatever the Vapotherm standard is or if one does not exist we can create our own)
 - Implement patterns from Taylor's book
 - Use static analysis tools
 - Maintain code traceability to design
