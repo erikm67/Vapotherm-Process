@@ -9,8 +9,21 @@
 # Part I: Winning the War Within
 
 ## Chapter 1: Extreme Ownership  
-## Chapter 2: No Bad Teams, Only Bad Leaders  
-## Chapter 3: Believe  
+
+- How can you best get your team to most effectively execute the plan in order to accomplish the mission?
+
+## Chapter 2: No Bad Teams, Only Bad Leaders
+
+- Its not what you preach, it is what you tolerate.
+- Consequences for failing need not be immediately severe, but leaders must ensure that tasks are repeated until the higher expected standard is achieved. 
+- Be constantly looking to improve, add capability, and push the standards higher. 
+  
+## Chapter 3: Believe
+
+- A leader must be a true believer in the mission.
+- Fourth law of combat: decentralized command.
+- If you don't understand or believe in the decisions coming dow from your leadership, it is up to you to ask questions until you understand how and why those decisions are being made.
+
 ## Chapter 4: Check the Ego  
 
 # Part II: Laws of Combat
