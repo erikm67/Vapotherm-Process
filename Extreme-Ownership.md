@@ -29,6 +29,10 @@
 # Part II: Laws of Combat
 
 ## Chapter 5: Cover and Move  
+
+- The most fundamental tactic perhaps the only tactic. Put simply, teamwork. All elements within the greater team are crucial and must work together to accomplish the mission, mutually supporting one another for that singular purpose.
+8 mins left in chapter
+
 ## Chapter 6: Simple  
 ## Chapter 7: Prioritize and Execute  
 ## Chapter 8: Decentralized Command  
