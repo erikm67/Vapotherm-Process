@@ -34,6 +34,9 @@
 - US team does singapore code review while they are sleeping and vice versa.
 
 ## Chapter 6: Simple  
+
+- Possible simple start plan, convert to git, implement git-flow branching, implement peer code review cross time zones.
+
 ## Chapter 7: Prioritize and Execute  
 ## Chapter 8: Decentralized Command  
 
