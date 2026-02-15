@@ -366,7 +366,7 @@ Run static analysis regularly, address findings promptly, and document results f
 
 #### Pull Request Peer Code Review Checklist
 
-Initial idea is that the acute team reviews home and vice versa.  Code does not merge until two team members are happy.
+Initial idea is that the acute team reviews home and vice versa.  Code does not merge until two team members are happy.  Can we utilize the time zones such that us team reviews singapore while they are sleeping and vice versa?
 
 Peer code reviews are critical for maintaining code quality, safety, and compliance in embedded software development. Use the following checklist during pull request reviews to ensure thorough evaluation:
 
