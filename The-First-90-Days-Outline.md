@@ -201,6 +201,8 @@ Questions:
 
 ## 7. Build Your Team
 
+Values for the team. 
+
 ## 8. Create Alliances
 
 ## 9. Manage Yourself
