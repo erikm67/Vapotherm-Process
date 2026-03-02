@@ -202,6 +202,8 @@ Questions:
 ## 7. Build Your Team
 
 Values for the team. 
+- Not afraid to make mistakes. We will make mistakes but we fix them. 
+- We need to own the software process in code and documents.  No one else will be on top of this. 
 
 ## 8. Create Alliances
 
