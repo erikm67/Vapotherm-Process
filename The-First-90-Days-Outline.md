@@ -193,6 +193,8 @@ Questions:
 
 ## 3. Match Strategy to Situation
 
+In contrast, realignments (and sustaining-success assignments) are more ready-aim-fire situations. Turning around a failing business requires the new leader to cut it down to a defensible core fast and then begin to build it back up. This painful process, if successful, leaves the business in a sustaining-success situation. If efforts to turn around the business fail, the result often is shutdown or divestiture.
+
 ## 4. Secure Early Wins
 
 ## 5. Negotiate Success
