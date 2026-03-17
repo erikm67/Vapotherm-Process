@@ -195,6 +195,8 @@ Questions:
 
 In contrast, realignments (and sustaining-success assignments) are more ready-aim-fire situations. Turning around a failing business requires the new leader to cut it down to a defensible core fast and then begin to build it back up. This painful process, if successful, leaves the business in a sustaining-success situation. If efforts to turn around the business fail, the result often is shutdown or divestiture.
 
+In realignments and sustaining-success situations, in contrast, you enter organizations that have significant strengths but also serious constraints on what you can and cannot do. Fortunately, in these two situations you typically have some time before you need to make major calls. This is good, because you must learn a lot about the culture and politics and begin building supportive coalitions. Because of internal complacency, erosion of key capabilities, or external challenges, successful businesses tend to drift toward trouble. In a realignment, your challenge is to revitalize a unit, product, process, or project that has been drifting into danger. The clouds are gathering on the horizon, but the storm has not yet broken—and many people may not even see the clouds. The biggest challenge often is to create a sense of urgency. There may be a lot of denial; the leader needs to open people’s eyes to the fact that a problem actually exists.
+
 ## 4. Secure Early Wins
 
 ## 5. Negotiate Success
