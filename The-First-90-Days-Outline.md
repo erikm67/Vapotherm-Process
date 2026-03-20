@@ -242,6 +242,30 @@ into a similar trap.
 | Sustaining success | Products | 10 |
 | | | 100 |
 
+Finally, Karl had the good judgment to secure early wins differently in the two situations. In turn-arounds, leaders must move people out of a state of despair. Karl did that in Europe by closing ailing plants and shifting production, actions that refocused the organization on its core strengths and helped cut unnecessary projects and initiatives. 
+
+In the realignment, in contrast, the most 
+important early win is to raise people's 
+awareness of the need for change.
+Accomplish that by putting more emphasis 
+on facts and figures; he revamped the 
+company's performance metrics in 
+manufacturing and customer service to 
+focus employees' attention on critical 
+weaknesses in those areas, and he also 
+introduced external benchmarks and 
+hard-nosed assessments by respected 
+consultants-drawing on impartial voices
+from oitside the company. Pierce unfounded
+optimism and send an important message to
+the rest of the organization. 
+
+| | Realignments |
+| -- | -- |
+| 1. Organize to learn Figure out what you most need to learn, from whom, and how you can best learn it. | Focus on cultural and political learning. Prepare to act deliberately.|
+| 2. Define strategic intent Develop and communicate a compelling vision for what the organization will become. Outline a clear strategy for achieving that vision. | Hone and leverage existing capabilities. Stimulate innovation. |
+| 3. Establish A-item priorities Identify a few vital goals and pursue them relentlessly. Think about what you need to have accomplished by the end of year 1 in the new position. | Make slower, more deliberate moves. Focus on systems, skills, and culture. |
+
 ## 4. Secure Early Wins
 
 ## 5. Negotiate Success
