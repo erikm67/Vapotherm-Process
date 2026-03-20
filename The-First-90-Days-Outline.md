@@ -233,6 +233,15 @@ Want to understand the Polarion situation and
 what happened to that team so as to not fall
 into a similar trap. 
 
+| STARS Situation | Job Element | Priority percentage |
+| -- | -- | -- |
+| Start-up | | |
+| Turnaround | Processes | 10 |
+| Accelerating growth | | |
+| Realignment | Projects, processes | 80 |
+| Sustaining success | Products | 10 |
+| | | 100 |
+
 ## 4. Secure Early Wins
 
 ## 5. Negotiate Success
