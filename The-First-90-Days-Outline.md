@@ -265,6 +265,9 @@ the rest of the organization.
 | 1. Organize to learn Figure out what you most need to learn, from whom, and how you can best learn it. | Focus on cultural and political learning. Prepare to act deliberately.|
 | 2. Define strategic intent Develop and communicate a compelling vision for what the organization will become. Outline a clear strategy for achieving that vision. | Hone and leverage existing capabilities. Stimulate innovation. |
 | 3. Establish A-item priorities Identify a few vital goals and pursue them relentlessly. Think about what you need to have accomplished by the end of year 1 in the new position. | Make slower, more deliberate moves. Focus on systems, skills, and culture. |
+| 4. Build the leadership team Evaluate the team you inherited. Move deftly to make the necessary changes; find the optimal balance between bringing in outside talent and elevating high potentials within the organization. | Make a few important changes. Promote high potentials from within. |
+| 5. Secure early wins Think through how you plan to “arrive” in the new organization. Find ways to build personal credibility and energize the ranks. | Shift the organizational mind-set from denial to awareness. |
+| 6. Create supporting alliances Identify how the organization really works and who has influence. Create key coalitions in support of your initiatives. | Build alliances sideways and down to ensure better execution. |
 
 ## 4. Secure Early Wins
 
