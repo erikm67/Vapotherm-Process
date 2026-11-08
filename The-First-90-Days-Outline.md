@@ -193,6 +193,82 @@ Questions:
 
 ## 3. Match Strategy to Situation
 
+In contrast, realignments (and 
+sustaining-success assignments) are more 
+ready-aim-fire situations. Turning around 
+a failing business requires the new leader 
+to cut it down to a defensible core fast 
+and then begin to build it back up. This 
+painful process, if successful, leaves the 
+business in a sustaining-success situation. 
+If efforts to turn around the business fail, 
+the result often is shutdown or divestiture.
+
+In realignments and sustaining-success 
+situations, in contrast, you enter 
+organizations that have significant 
+strengths but also serious constraints 
+on what you can and cannot do. Fortunately, 
+in these two situations you typically have 
+some time before you need to make major 
+calls. This is good, because you must learn 
+a lot about the culture and politics and 
+begin building supportive coalitions. 
+Because of internal complacency, erosion 
+of key capabilities, or external challenges, 
+successful businesses tend to drift 
+toward trouble. In a realignment, your 
+challenge is to revitalize a unit, product, 
+process, or project that has been drifting 
+into danger. The clouds are gathering on 
+the horizon, but the storm has not yet 
+broken—and many people may not even see 
+the clouds. The biggest challenge often is 
+to create a sense of urgency. There may be 
+a lot of denial; the leader needs to open 
+people’s eyes to the fact that a problem 
+actually exists.
+
+Want to understand the Polarion situation and
+what happened to that team so as to not fall
+into a similar trap. 
+
+| STARS Situation | Job Element | Priority percentage |
+| -- | -- | -- |
+| Start-up | | |
+| Turnaround | Processes | 10 |
+| Accelerating growth | | |
+| Realignment | Projects, processes | 80 |
+| Sustaining success | Products | 10 |
+| | | 100 |
+
+Finally, Karl had the good judgment to secure early wins differently in the two situations. In turn-arounds, leaders must move people out of a state of despair. Karl did that in Europe by closing ailing plants and shifting production, actions that refocused the organization on its core strengths and helped cut unnecessary projects and initiatives. 
+
+In the realignment, in contrast, the most 
+important early win is to raise people's 
+awareness of the need for change.
+Accomplish that by putting more emphasis 
+on facts and figures; he revamped the 
+company's performance metrics in 
+manufacturing and customer service to 
+focus employees' attention on critical 
+weaknesses in those areas, and he also 
+introduced external benchmarks and 
+hard-nosed assessments by respected 
+consultants-drawing on impartial voices
+from oitside the company. Pierce unfounded
+optimism and send an important message to
+the rest of the organization. 
+
+| | Realignments |
+| -- | -- |
+| 1. Organize to learn Figure out what you most need to learn, from whom, and how you can best learn it. | Focus on cultural and political learning. Prepare to act deliberately.|
+| 2. Define strategic intent Develop and communicate a compelling vision for what the organization will become. Outline a clear strategy for achieving that vision. | Hone and leverage existing capabilities. Stimulate innovation. |
+| 3. Establish A-item priorities Identify a few vital goals and pursue them relentlessly. Think about what you need to have accomplished by the end of year 1 in the new position. | Make slower, more deliberate moves. Focus on systems, skills, and culture. |
+| 4. Build the leadership team Evaluate the team you inherited. Move deftly to make the necessary changes; find the optimal balance between bringing in outside talent and elevating high potentials within the organization. | Make a few important changes. Promote high potentials from within. |
+| 5. Secure early wins Think through how you plan to “arrive” in the new organization. Find ways to build personal credibility and energize the ranks. | Shift the organizational mind-set from denial to awareness. |
+| 6. Create supporting alliances Identify how the organization really works and who has influence. Create key coalitions in support of your initiatives. | Build alliances sideways and down to ensure better execution. |
+
 ## 4. Secure Early Wins
 
 ## 5. Negotiate Success
@@ -200,6 +276,10 @@ Questions:
 ## 6. Achieve Alignment
 
 ## 7. Build Your Team
+
+Values for the team. 
+- Not afraid to make mistakes. We will make mistakes but we fix them. 
+- We need to own the software process in code and documents.  No one else will be on top of this. 
 
 ## 8. Create Alliances
 
