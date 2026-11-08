@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The-First-90-Days-Outline.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="the-first-90-days-%E2%80%93-chapter-outline">The First 90 Days – Chapter Outline</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li>Prepare Yourself</li>
+<li>Accelerate Your Learning</li>
+<li>Match Strategy to Situation</li>
+<li>Secure Early Wins</li>
+<li>Negotiate Success</li>
+<li>Achieve Alignment</li>
+<li>Build Your Team</li>
+<li>Create Alliances</li>
+<li>Manage Yourself</li>
+<li>Accelerate Everyone</li>
+</ol>
+<hr>
+<h2 id="i-introduction">I. Introduction</h2>
+<h3 id="transition-scenarios-table">Transition Scenarios Table</h3>
+<table>
+<thead>
+<tr>
+<th>Transition Scenario</th>
+<th>Applies?</th>
+<th>Difficulty (1-10)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Moving to a new industry or profession</td>
+<td>No</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Joining a new company</td>
+<td>Yes</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Moving to a new unit or group in the same company</td>
+<td>No</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Being promoted to a higher level</td>
+<td>Yes</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Leading former peers (assuming you have been promoted)</td>
+<td>No</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Moving from one function to another (e.g., sales to marketing)</td>
+<td>No</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Taking on a cross-functional leadership role for the first time</td>
+<td>No</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Moving geographically</td>
+<td>Yes-ish</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Entering a new national or ethnic culture</td>
+<td>Yes</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Having to do two jobs at the same time (finishing old role while starting new one)</td>
+<td>No</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Taking on a newly created role (as opposed to an existing role)</td>
+<td>Yes</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Entering an organization in which major change already is going on</td>
+<td>No?</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Totals</td>
+<td></td>
+<td>33</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-prepare-yourself">1. Prepare Yourself</h2>
+<h3 id="prep-checklist-from-audiobook">Prep checklist from audiobook</h3>
+<ul>
+<li><input type="checkbox" id="checkbox0"><label for="checkbox0">New org: how to orient with the business, identify with key stakeholders, key expectations, adapt to new culture (keep or change culture)</label></li>
+<li><input type="checkbox" id="checkbox1"><label for="checkbox1">What has made me successful?  Is this enough or do I need to develop new skills?</label></li>
+<li><input type="checkbox" id="checkbox2"><label for="checkbox2">Are there aspects that are critical but I don't want to focus on?</label></li>
+<li><input type="checkbox" id="checkbox3"><label for="checkbox3">How to make mental leap into new position?  Other activities?</label></li>
+</ul>
+<h3 id="onboarding-checklists-table-1-1">Onboarding Checklists Table 1-1</h3>
+<p>Business orientation checklist</p>
+<ul>
+<li><input type="checkbox" id="checkbox4" checked="true"><label for="checkbox4">As early as possible, get access to publicly available information about financials, products, strategy, and brands.</label></li>
+<li><input type="checkbox" id="checkbox5"><label for="checkbox5">Identify additional sources of information, such as websites and analyst reports.</label></li>
+<li><input type="checkbox" id="checkbox6"><label for="checkbox6">If appropriate for your level, ask the business to assemble a briefing book.</label></li>
+<li><input type="checkbox" id="checkbox7"><label for="checkbox7">If possible, schedule familiarization tours of key facilities before the formal start date.</label></li>
+</ul>
+<p>Stakeholder connection checklist</p>
+<ul>
+<li><input type="checkbox" id="checkbox8"><label for="checkbox8">Ask your boss to identify and introduce you to the key people you should connect with early on.</label></li>
+<li><input type="checkbox" id="checkbox9"><label for="checkbox9">If possible, meet with some stakeholders before the formal start.</label></li>
+<li><input type="checkbox" id="checkbox10"><label for="checkbox10">Take control of your calendar, and schedule early meetings with key stakeholders.</label></li>
+<li><input type="checkbox" id="checkbox11"><label for="checkbox11">Be careful to focus on lateral relationships (peers, others) and not only vertical ones (boss, direct reports).</label></li>
+</ul>
+<p>Expectations alignment checklist</p>
+<ul>
+<li><input type="checkbox" id="checkbox12"><label for="checkbox12">Understand and engage in business planning and performance management.</label></li>
+<li><input type="checkbox" id="checkbox13"><label for="checkbox13">No matter how well you think you understand what you need to do, schedule a conversation with your boss about expectations in your first week.</label></li>
+<li><input type="checkbox" id="checkbox14"><label for="checkbox14">Have explicit conversations about working styles with bosses and direct reports as early as possible.</label></li>
+</ul>
+<p>Cultural adaptation checklist</p>
+<ul>
+<li><input type="checkbox" id="checkbox15" checked="true"><label for="checkbox15">During recruiting, ask questions about the organization’s culture.</label></li>
+<li><input type="checkbox" id="checkbox16"><label for="checkbox16">Schedule conversations with your new boss and HR to discuss work culture, and check back with them regularly.</label></li>
+<li><input type="checkbox" id="checkbox17"><label for="checkbox17">Identify people inside the organization who could serve as culture interpreters.</label></li>
+<li><input type="checkbox" id="checkbox18"><label for="checkbox18">After thirty days, conduct an informal 360-degree check-in with your boss and peers to gauge how adaptation is proceeding.</label></li>
+</ul>
+<h3 id="assessment-of-problem-preferences-table-1-2">Assessment of Problem Preferences Table 1-2</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Design of appraisal and reward systems</td>
+<td>Employee morale</td>
+<td>Equity/fairness</td>
+</tr>
+<tr>
+<td>2</td>
+<td>8</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Management of financial risk</td>
+<td>Budgeting</td>
+<td>Cost-consciousness</td>
+</tr>
+<tr>
+<td>7</td>
+<td>6</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Product positioning</td>
+<td>Relationships with customers</td>
+<td>Organizational customer focus</td>
+</tr>
+<tr>
+<td>8</td>
+<td>6</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Product or service quality</td>
+<td>Relationships with distributors and suppliers</td>
+<td>Continuous improvement</td>
+</tr>
+<tr>
+<td>10</td>
+<td>6</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Project management systems</td>
+<td>Relationships among R&amp;D, marketing, and operations</td>
+<td>Cross-functional cooperation</td>
+</tr>
+<tr>
+<td>7</td>
+<td>8</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<h3 id="preferences-for-problems-and-functions-table-1-3">Preferences for problems and functions Table 1-3</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Technical</th>
+<th>Political</th>
+<th>Cultural</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Human resources</td>
+<td>2</td>
+<td>8</td>
+<td>6</td>
+<td>16</td>
+</tr>
+<tr>
+<td>Finance</td>
+<td>7</td>
+<td>6</td>
+<td>6</td>
+<td>19</td>
+</tr>
+<tr>
+<td>Marketing</td>
+<td>8</td>
+<td>6</td>
+<td>5</td>
+<td>19</td>
+</tr>
+<tr>
+<td>Operations</td>
+<td>10</td>
+<td>6</td>
+<td>8</td>
+<td>24</td>
+</tr>
+<tr>
+<td>Research and development</td>
+<td>7</td>
+<td>8</td>
+<td>8</td>
+<td>23</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>34</td>
+<td>33</td>
+<td>33</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-accelerate-your-learning">2. Accelerate Your Learning</h2>
+<blockquote>
+<p>You know nothing, Jon Snow. - Ygritte</p>
+</blockquote>
+<p>Questions:</p>
+<ul>
+<li>How did we get to this point?</li>
+<li>Why was my role created?</li>
+<li>What do I most need to learn?</li>
+<li>What is going on and why?</li>
+<li>What are the points from my hiring skills assessment?</li>
+<li>Questions about the past?
+<ul>
+<li>Performance
+<ul>
+<li>How has this organization performed in the past?</li>
+<li>How do people in the organization think it has performed?</li>
+<li>How were goals set?</li>
+<li>Were they insufficiently or overly ambitious?</li>
+<li>Were internal or external benchmarks used?</li>
+<li>What measures were employed?</li>
+<li>What behaviors did they encourage and discourage?</li>
+<li>What happened if goals were not met?</li>
+</ul>
+</li>
+<li>Root Causes
+<ul>
+<li>If performance has been good, why has that been the case?</li>
+<li>What have been the relative contributions of strategy, structure, systems, talent bases, culture, and politics?</li>
+<li>If performance has been poor, why has that been the case?</li>
+<li>Do the primary issues reside in the organization’s strategy? Its structure? Its technical capabilities? Its culture? Its politics?</li>
+</ul>
+</li>
+<li>History of Change
+<ul>
+<li>What efforts have been made to change the organization?  What happened?</li>
+<li>Who has been instrumental in shaping this organization?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Questions about the present?
+<ul>
+<li>Vision and Strategy
+<ul>
+<li>What is the stated vision and strategy?</li>
+<li>Is the organization really pursuing that strategy? If not, why not? If so, will the strategy take the organization where it needs to go?</li>
+</ul>
+</li>
+<li>People
+<ul>
+<li>Who is capable, and who is not?</li>
+<li>Who is trustworthy, and who is not?</li>
+<li>Who has influence, and why?
+<ul>
+<li><strong>Soundharya likely, she got the web version to 510k, got promotoed and created my position.</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Processes
+<ul>
+<li>What are the key processes?</li>
+<li>Are they performing acceptably in quality, reliability, and timeliness? If not, why not?</li>
+</ul>
+</li>
+<li>Land Mines
+<ul>
+<li>What lurking surprises could detonate and push you offtrack?
+<ul>
+<li><strong>Possibly commitments on home software 510k.</strong></li>
+</ul>
+</li>
+<li>What potentially damaging cultural or political missteps must you avoid?</li>
+</ul>
+</li>
+<li>Early Wins
+<ul>
+<li>In what areas (people, relationships, processes, orproducts) can you achieve some early wins?
+<ul>
+<li><strong>New patient circuit software code, documentation, test and release.</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Questions about the future?
+<ul>
+<li>Challenges and Opportunities
+<ul>
+<li>In what areas is the organization most likely to face stiff challenges in the coming year?</li>
+<li>What can be done now to prepare for them?</li>
+<li>What are the most promising unexploited opportunities?</li>
+<li>What would need to happen to realize their potential?</li>
+</ul>
+</li>
+<li>Barriers and Resources
+<ul>
+<li>What are the most formidable barriers to making needed changes?</li>
+<li>Are they technical? Cultural? Political?</li>
+<li>Are there islands of excellence or other high-quality resources that you can leverage?
+<ul>
+<li><strong>Can Niall do the CI/CD work?</strong></li>
+</ul>
+</li>
+<li>What new capabilities need to be developed or acquired?
+<ul>
+<li><strong>Can we leverage India team to do unit test development?</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Culture
+<ul>
+<li>Which elements of the culture should be preserved?</li>
+<li>Which elements need to change?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="structured-methods-for-learning-table-2-1">Structured methods for learning Table 2-1</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Uses</th>
+<th>Useful for</th>
+<th>Do It?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Organizational climate and employee satisfaction surveys</td>
+<td>Learning about culture and morale. Many organizations do such surveys regularly, and a database may already be available. If not, consider setting up a regular survey of employee perceptions.</td>
+<td>Useful for managers at all levels if the analysis is available specifically for your unit or group. Usefulness depends on the granularity of the collection and analysis. This also assumes the survey instrument is a good one and the data has been collected carefully and analyzed rigorously.</td>
+<td>No? Check around but probably not available?</td>
+</tr>
+<tr>
+<td>Structured sets of interviews with slices of the organization or unit</td>
+<td>Identifying shared and divergent perceptions of opportunities and problems. You can interview people at the same level in different departments (a horizontal slice) or bore down through multiple levels (a vertical slice). Whichever dimension you choose, ask everybody the same questions, and look for similarities and differences in people’s responses.</td>
+<td>Most useful for managers leading groups of people from different functional backgrounds. Can be useful at lower levels if the unit is experiencing significant problems.</td>
+<td>Yes, within my group.</td>
+</tr>
+<tr>
+<td>Focus groups</td>
+<td>Probing issues that preoccupy key groups of employees, such as morale issues among frontline production or service workers. Gathering groups of people who work together also lets you see how they interact and identify who displays leadership. Fostering discussion promotes deeper insight.</td>
+<td>Most useful for managers of large groups of people who perform a similar function, such as sales managers or plant managers. Can be useful for senior managers as a way of getting quick insights into the perceptions of key employee constituencies.</td>
+<td>No, not applicable for my situation. Of course, will determine and do process improvements as a group.</td>
+</tr>
+<tr>
+<td>Analysis of critical past decisions</td>
+<td>Illuminating decision-making patterns and sources of power and influence. Select an important recent decision, and look into how it was made. Who exerted influence at each stage? Talk with the people involved, probe their perceptions, and note what is and is not said.</td>
+<td>Most useful for higher-level managers of business units or project groups.</td>
+<td>Yes, but perhaps incorporate into structured interviews.</td>
+</tr>
+<tr>
+<td>Process analysis</td>
+<td>Examining interactions among departments or functions and assessing the efficiency of a process. Select an important process, such as delivery of products to customers or distributors, and assign a cross-functional group to chart the process and identify bottlenecks and problems.</td>
+<td>Most useful for managers of units or groups in which the work of multiple functional specialties must be integrated. Can be useful for lower-level managers as a way of understanding how their groups fit into larger processes.</td>
+<td>Yes, need to understand our process before recommending changes.</td>
+</tr>
+<tr>
+<td>Plant and market tours</td>
+<td>Learning firsthand from people close to the product. Plant tours let you meet production personnel informally and listen to their concerns. Meetings with sales and production staff help you assess technical capabilities. Market tours can introduce you to customers, whose comments can reveal problems and opportunities.</td>
+<td>Most useful for managers of business units.</td>
+<td>Yes, need to go to Cincy, Singapore and NH.</td>
+</tr>
+<tr>
+<td>Pilot projects</td>
+<td>Gaining deep insight into technical capabilities, culture, and politics. Although these insights are not the primary purpose of pilot projects, you can learn a lot from how the organization or group responds to your pilot initiatives.</td>
+<td>Useful for managers at all levels. The size of the pilot projects and their impact will increase as you rise through the organization.</td>
+<td>Yes, good idea for each process improvement.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="structured-questions-for-team">Structured Questions for Team</h3>
+<ul>
+<li>Talk about my background and general vision</li>
+<li>Talk about their background</li>
+<li>Same questions about business
+<ul>
+<li>What are the biggest challenges facing the org?</li>
+<li>Why is the org facing these challenges?</li>
+<li>What are the most promising unexplored opportunities for growth?</li>
+<li>What would need to happen for org to exploit these opportunities?</li>
+<li>If you were me what would you focus on?</li>
+</ul>
+</li>
+</ul>
+<h3 id="structured-questions-for-parallel">Structured Questions for Parallel</h3>
+<h3 id="structured-questions-for-leaders">Structured Questions for Leaders</h3>
+<h2 id="3-match-strategy-to-situation">3. Match Strategy to Situation</h2>
+<h2 id="4-secure-early-wins">4. Secure Early Wins</h2>
+<h2 id="5-negotiate-success">5. Negotiate Success</h2>
+<h2 id="6-achieve-alignment">6. Achieve Alignment</h2>
+<h2 id="7-build-your-team">7. Build Your Team</h2>
+<h2 id="8-create-alliances">8. Create Alliances</h2>
+<h2 id="9-manage-yourself">9. Manage Yourself</h2>
+<h2 id="10-accelerate-everyone">10. Accelerate Everyone</h2>
+
+</body>
+</html>
